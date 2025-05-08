@@ -14,7 +14,7 @@ Please also make sure you have the VSCode ESLint plugin installed to get auto-fo
 
 When you make your PR, please expect your code to be reviewed and changes to be requested.
 
-Please view all rules and guidelines of contributing in [CONTRIBUTING.md]
+Please view all rules and guidelines of contributing in [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ### Installation
 
