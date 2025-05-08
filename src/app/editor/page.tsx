@@ -69,24 +69,25 @@ export default function EditorPage() {
             /iPad/i,
             /iPod/i,
             /BlackBerry/i,
-            /Windows Phone/i
+            /Windows Phone/i,
         ];
-        
+
         return toMatch.some(toMatchItem => {
-            if (!window?.navigator) return false
+            if (!window?.navigator)
+                return false;
             return window.navigator.userAgent.match(toMatchItem);
         });
     }
 
-    if (isMobile()) 
+    if (isMobile())
         return (<main className="absolute-center w-[75%]">
             <p className="whitespace-pre-wrap">
                 Unfortunately, the save editor is currently not supported on mobile.{"\n"}
                 Android support may be added in the future but IOS support is currently impossible.{"\n"}
-                If you would like to help add android support, please join the 
+                If you would like to help add android support, please join the{" "}
                 <a href="https://discord.gg/cAbXMwQ4sz" target="_blank">Discord server</a>!
             </p>
-        </main>)
+        </main>);
 
     return (
         <main className="absolute-center h-full p-5 py-10 lg:w-[50%] md:w-[75%] flex flex-col gap-2">

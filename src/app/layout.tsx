@@ -42,7 +42,6 @@ export default function RootLayout({
 
                 <div
                     className="absolute top-2 right-2 flex flex-row-reverse gap-2"
-                    
                 >
                     <a href="https://github.com/mrdiamonddog/balatrools"><FaGithub size={32} /></a>
                     <a href="https://discord.gg/cAbXMwQ4sz"><FaDiscord size={32} /></a>
