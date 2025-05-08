@@ -26,6 +26,6 @@ Requirements
 
 ## Use of AI
 
-Balatrools is made without the use of generative AI, especially images. If you are going to contribute, please do not include any AI generated assets/text.
+Balatrools is made without the use of generative AI, especially images. If you are going to contribute, please do not include any AI generated assets/text. Any pull requests with AI-generated code/text will be denied and you will possibly be blocked from contributing in the future.
 
 ![jimbo](public/jimbo.jpg)
