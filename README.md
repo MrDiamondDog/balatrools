@@ -14,6 +14,8 @@ Please also make sure you have the VSCode ESLint plugin installed to get auto-fo
 
 When you make your PR, please expect your code to be reviewed and changes to be requested.
 
+Please view all rules and guidelines of contributing in [CONTRIBUTING.md]
+
 ### Installation
 
 Requirements
@@ -25,9 +27,5 @@ Requirements
 3. `pnpm start`
 4. Go to http://localhost:3000
 5. Profit
-
-## Use of AI
-
-Balatrools is made without the use of generative AI, especially images. If you are going to contribute, please do not include any AI generated assets/text. Any pull requests with AI-generated code/text will be denied and you will possibly be blocked from contributing in the future.
 
 ![jimbo](public/jimbo.jpg)
