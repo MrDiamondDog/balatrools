@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { FaGithub } from "react-icons/fa6";
+import { FaDiscord, FaGithub } from "react-icons/fa6";
 
 export const metadata: Metadata = {
     title: "Balatrools | Balatro Save Editor & Resources",
@@ -40,12 +40,13 @@ export default function RootLayout({
             <body>
                 {children}
 
-                <a
-                    className="absolute top-2 right-2 !text-gray-400 hover:!text-white"
-                    href="https://github.com/mrdiamonddog/balatrools"
+                <div
+                    className="absolute top-2 right-2 flex flex-row-reverse gap-2"
+                    
                 >
-                    <FaGithub size={32} />
-                </a>
+                    <a href="https://github.com/mrdiamonddog/balatrools"><FaGithub size={32} /></a>
+                    <a href="https://discord.gg/cAbXMwQ4sz"><FaDiscord size={32} /></a>
+                </div>
             </body>
         </html>
     );
