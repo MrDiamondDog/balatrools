@@ -30,7 +30,7 @@ export interface JokerStats {
     losses: number[];
 }
 
-export interface ProfileData {
+export interface ProfileFileData {
     career_stats: {
         c_cards_discarded: number;
         c_hands_played: number;

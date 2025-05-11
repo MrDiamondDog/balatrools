@@ -1,8 +1,8 @@
-import { SettingsData } from "@/types/settings";
+import { SettingsFileData } from "@/types/settings";
 import EditorInput from "../EditorInput";
 import Info from "../Info";
 
-export default function SettingsEditor({ data, setData }: { data: SettingsData, setData: (data: SettingsData) => void }) {
+export default function SettingsEditor({ data, setData }: { data: SettingsFileData, setData: (data: SettingsFileData) => void }) {
     return (<>
         <Info info="Global settings for the game"><h2>Settings</h2></Info>
         <p>Version: {data.version}</p>

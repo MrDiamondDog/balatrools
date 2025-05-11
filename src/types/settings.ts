@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-export interface SettingsData {
+export interface SettingsFileData {
     version: string;
     reduced_motion: boolean;
     paused: boolean;

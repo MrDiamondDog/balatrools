@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import EditorInput from "../EditorInput";
 import Info from "../Info";
-import { ProfileData, Progress } from "@/types/profile";
+import { ProfileFileData, Progress } from "@/types/profile";
 import { Balatro } from "@/lib/gamedata";
 import JokerEntry from "../JokerEntry";
 import Input from "../Input";
@@ -26,7 +26,7 @@ function StakeButton({ index, selected, setSelectedStake }:
     </div>);
 }
 
-export default function ProfileEditor({ data, setData }: { data: ProfileData, setData: (data: ProfileData) => void }) {
+export default function ProfileEditor({ data, setData }: { data: ProfileFileData, setData: (data: ProfileFileData) => void }) {
     const [selectedStake, setSelectedStake] = useState<number>(-1);
     const [jokerSearch, setJokerSearch] = useState<string>("");
 

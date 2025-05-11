@@ -1,7 +1,7 @@
-import { SettingsData, info } from "@/types/settings";
+import { SettingsFileData, info } from "@/types/settings";
 import Input from "./Input";
-import { MetaData } from "@/types/meta";
-import { ProfileData } from "@/types/profile";
+import { MetaFileData } from "@/types/meta";
+import { ProfileFileData } from "@/types/profile";
 
 interface Props {
     type: "checkbox" | "string" | "range" | "number";
@@ -9,7 +9,7 @@ interface Props {
     min?: number;
     max?: number;
     step?: number;
-    settings: SettingsData | ProfileData | MetaData;
+    settings: SettingsFileData | ProfileFileData | MetaFileData;
     label?: string;
     placeholder?: string;
     danger?: boolean;
