@@ -3,13 +3,13 @@ import EditorInput from "./EditorInput";
 import Joker from "./infocards/Joker";
 import Info from "./Info";
 import Input from "./Input";
-import { ProfileData } from "@/types/profile";
+import { ProfileFileData } from "@/types/profile";
 import { useState } from "react";
 import Dialog from "./Dialog";
 import { createPortal } from "react-dom";
 
 export default function JokerEntry({ jokerKey, profile, setProfile, stake }:
-    { stake: number, jokerKey: string; profile: ProfileData; setProfile: (settings: ProfileData) => void }) {
+    { stake: number, jokerKey: string; profile: ProfileFileData; setProfile: (settings: ProfileFileData) => void }) {
     const joker = Balatro.Joker[jokerKey as keyof typeof Balatro.Joker];
     const usageData = profile.joker_usage[jokerKey as keyof typeof Balatro.Joker];
 

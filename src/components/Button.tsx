@@ -2,6 +2,7 @@ import React from "react";
 
 export enum ButtonStyles {
     primary = "bg-primary-1 hover:bg-primary-2",
+    secondary = "bg-bg-4 hover:bg-bg-3",
     danger = "bg-danger-1 hover:bg-danger-2",
     success = "bg-success-1 hover:bg-success-2",
 }

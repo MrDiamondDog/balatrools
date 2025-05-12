@@ -1,3 +1,4 @@
+/* eslint-disable quote-props */
 /* eslint-disable max-len */
 
 export type DiscoverableItem =
@@ -15,7 +16,48 @@ export type DiscoverableItem =
 export type Consumable =
     keyof typeof Balatro.Tarot
     | keyof typeof Balatro.Planet
-    | keyof typeof Balatro.Spectral
+    | keyof typeof Balatro.Spectral;
+
+export type CardAreaCard = {
+    sprite_facing: "front",
+    ignore_base_shader: any,
+    rank: number,
+    save_fields: {
+        // card id (playing card = "c_base")
+        center: string,
+        // if playing card {SUIT}_{NUM}
+        card?: string,
+    },
+    label: string,
+    base: {
+        nominal: number,
+        suit_nominal: number,
+        face_nominal: number,
+        suit_nominal_original: number,
+        times_played: number
+        suit?: keyof typeof Balatro.suits_plural,
+        id?: number,
+        colour?: number[],
+        value?: string,
+        name?: string,
+    },
+    ignore_shadow: any,
+    cost: number,
+    base_cost: number,
+    added_to_deck: true,
+    params: any,
+    bypass_lock: true,
+    unique_val__saved_ID: number,
+    unique_val: number,
+    sort_id: number,
+    bypass_discovery_center: true,
+    bypass_discovery_ui: true,
+    ability: any,
+    facing: string,
+    debuff: boolean,
+    sell_cost: 3,
+    extra_cost: 0
+}
 
 export const Balatro = {
     achievement_names: {
@@ -109,15 +151,15 @@ export const Balatro = {
         "Five of a Kind": "Five of a Kind",
     },
     ranks: {
-        2: "2",
-        3: "3",
-        4: "4",
-        5: "5",
-        6: "6",
-        7: "7",
-        8: "8",
-        9: "9",
-        10: "10",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10",
         Queen: "Queen",
         King: "King",
         Jack: "Jack",
