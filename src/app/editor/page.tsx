@@ -1,6 +1,7 @@
 "use client";
 
 import Button, { ButtonStyles } from "@/components/Button";
+import Discord from "@/components/Discord";
 import { Dropdown } from "@/components/Dropdown";
 import { TopLevelJsonEditor } from "@/components/editors/Json";
 import MetaEditor from "@/components/editors/Meta";
@@ -10,6 +11,7 @@ import SettingsEditor from "@/components/editors/Settings";
 import FileInput from "@/components/FileInput";
 import Subtext from "@/components/Subtext";
 import { processFile, processJSON } from "@/lib/jkrFile";
+import { sendGAEvent } from "@next/third-parties/google";
 import { useEffect, useState } from "react";
 
 export default function EditorPage() {
@@ -47,6 +49,7 @@ export default function EditorPage() {
         }
 
         setFileType(fileType);
+        sendGAEvent({ event: "fileUpload", value: fileType });
 
         const reader = new FileReader();
         reader.onload = () => {
@@ -75,6 +78,8 @@ export default function EditorPage() {
         link.href = url;
         link.download = file.name;
         link.click();
+
+        sendGAEvent({ event: "fileDownload", value: fileType });
     }
 
     function isMobile() {
@@ -104,7 +109,7 @@ export default function EditorPage() {
                 Unfortunately, the save editor is currently not supported on mobile.{"\n"}
                 Android support may be added in the future but IOS support is currently impossible.{"\n"}
                 If you would like to help add android support, please join the{" "}
-                <a href="https://discord.gg/cAbXMwQ4sz" target="_blank">Discord server</a>!
+                <Discord>Discord server</Discord>!
             </p>
         </main>);
 

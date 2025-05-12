@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { FaDiscord, FaGithub } from "react-icons/fa6";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
     title: "Balatrools | Balatro Save Editor & Resources",
@@ -26,17 +27,6 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <head>
-                {/* <!-- Google tag (gtag.js) --> */}
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6P1J19EDF"></script>
-                <script>
-                    {`window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-Q6P1J19EDF');`}
-                </script>
-            </head>
             <body>
                 {children}
 
@@ -47,6 +37,8 @@ export default function RootLayout({
                     <a href="https://discord.gg/cAbXMwQ4sz"><FaDiscord size={32} /></a>
                 </div>
             </body>
+
+            <GoogleAnalytics gaId="G-Q6P1J19EDF" />
         </html>
     );
 }
