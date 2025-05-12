@@ -10,8 +10,8 @@ import SaveEditor from "@/components/editors/Save";
 import SettingsEditor from "@/components/editors/Settings";
 import FileInput from "@/components/FileInput";
 import Subtext from "@/components/Subtext";
+import { analytics } from "@/lib/analytics";
 import { processFile, processJSON } from "@/lib/jkrFile";
-import { sendGAEvent } from "@next/third-parties/google";
 import { useEffect, useState } from "react";
 
 export default function EditorPage() {
@@ -49,7 +49,7 @@ export default function EditorPage() {
         }
 
         setFileType(fileType);
-        sendGAEvent({ event: "fileUpload", value: fileType });
+        analytics("fileUpload", fileType);
 
         const reader = new FileReader();
         reader.onload = () => {
@@ -79,7 +79,7 @@ export default function EditorPage() {
         link.download = file.name;
         link.click();
 
-        sendGAEvent({ event: "fileDownload", value: fileType });
+        analytics("fileDownload", fileType);
     }
 
     function isMobile() {
