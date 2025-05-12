@@ -31,7 +31,7 @@ export type SaveFileData = {
     }[];
     ACTION: {
         type: string;
-        card: 76;
+        card: number;
     };
     GAME: {
         tarot_rate: number;
