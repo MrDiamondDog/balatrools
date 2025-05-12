@@ -36,7 +36,7 @@ export default function RootLayout({
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-Q6P1J19EDF');`}
+          gtag('config', 'G-Q6P1J19EDF', { cookie_flags: 'SameSite=None;Secure' });`}
                 </script>
             </head>
             <body>
