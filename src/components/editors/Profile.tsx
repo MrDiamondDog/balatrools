@@ -6,7 +6,8 @@ import { Balatro } from "@/lib/gamedata";
 import JokerEntry from "../JokerEntry";
 import Input from "../Input";
 import Button from "../Button";
-import Stake from "../infocards/Stake";
+import InfoCard from "../InfoCard";
+import ItemImage from "../ItemImage";
 
 function StakeButton({ index, selected, setSelectedStake }:
     { index: number, selected: boolean, setSelectedStake: (index: number) => void }) {
@@ -19,8 +20,12 @@ function StakeButton({ index, selected, setSelectedStake }:
         }
         onClick={() => setSelectedStake(index)}
     >
-        <Info info={<Stake stake={Object.keys(Balatro.Stake)[index]} />} className="flex flex-col flex-wrap gap-2 w-full" noIcon>
-            <img className="mb-2 w-full h-full" src={`stakes/${stake.name.replace(" ", "_")}.webp`} />
+        <Info
+            info={<InfoCard item={Object.values(Balatro.Stake)[index]} />}
+            className="flex flex-col flex-wrap gap-2 w-full"
+            noIcon
+        >
+            <ItemImage item={stake} className="mb-2 w-full h-full" />
             <h3 className="text-center">{stake.name.replace(" Stake", "")}</h3>
         </Info>
     </div>);
