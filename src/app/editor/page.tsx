@@ -58,7 +58,7 @@ export default function EditorPage() {
 
             const json = processFile(data);
 
-            // console.log(json);
+            console.log(json);
 
             setRawFileData(JSON.stringify(json, null, 4));
             setFileData(json);
@@ -158,7 +158,7 @@ Modded files will not work properly. Please do not report any issues regarding m
                 {editorType === "normal" && <>
                     {fileType === "settings" && <SettingsEditor data={fileData} setData={setFileData} />}
                     {fileType === "profile" && <ProfileEditor data={fileData} setData={setFileData} />}
-                    {fileType === "meta" && <MetaEditor />}
+                    {fileType === "meta" && <MetaEditor data={fileData} setData={setFileData} />}
                     {fileType === "save" && <SaveEditor />}
                 </>}
                 {editorType === "JSON" && <>

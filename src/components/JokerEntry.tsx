@@ -1,12 +1,11 @@
 import { Balatro } from "@/lib/gamedata";
-import EditorInput from "./EditorInput";
-import Joker from "./infocards/Joker";
 import Info from "./Info";
 import Input from "./Input";
 import { ProfileFileData } from "@/types/profile";
 import { useState } from "react";
 import Dialog from "./Dialog";
 import { createPortal } from "react-dom";
+import InfoCard from "./InfoCard";
 
 export default function JokerEntry({ jokerKey, profile, setProfile, stake }:
     { stake: number, jokerKey: string; profile: ProfileFileData; setProfile: (settings: ProfileFileData) => void }) {
@@ -79,7 +78,11 @@ export default function JokerEntry({ jokerKey, profile, setProfile, stake }:
 
     return (<>
         <tr className="odd:bg-bg-3 cursor-pointer" onClick={() => setEditorOpen(!editorOpen)}>
-            <td className="px-2"><Info noIcon info={<Joker joker={jokerKey} />}><h3>{joker.name}</h3></Info></td>
+            <td className="px-2">
+                <Info noIcon info={<InfoCard item={Balatro.Joker[jokerKey as keyof typeof Balatro.Joker]} />}>
+                    <h3>{joker.name}</h3>
+                </Info>
+            </td>
             <td className="text-center">{usageData?.count ?? 0}</td>
             <td className="text-center">{stake === -1 ? totalWins : usageData?.wins[stake] ?? 0}</td>
             <td className="text-center">{stake === -1 ? totalLosses : usageData?.losses[stake] ?? 0}</td>

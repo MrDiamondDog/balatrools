@@ -1,7 +1,5 @@
-import { DiscoverableItem } from "@/lib/gamedata";
-
 export type MetaFileData = {
-    alerted: Partial<Record<DiscoverableItem, boolean>>;
-    discovered: Partial<Record<DiscoverableItem, boolean>>;
-    unlocked: Partial<Record<DiscoverableItem, boolean>>;
+    alerted: Partial<Record<string, boolean>>;
+    discovered: Partial<Record<string, boolean>>;
+    unlocked: Partial<Record<string, boolean>>;
 }
