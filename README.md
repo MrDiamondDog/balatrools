@@ -24,7 +24,7 @@ Requirements
 
 1. Clone the repo
 2. `pnpm i`
-3. `pnpm start`
+3. `pnpm dev`
 4. Go to http://localhost:3000
 5. Profit
 
